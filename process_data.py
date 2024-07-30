@@ -190,6 +190,6 @@ def save_process_data(file_list, name, exist_datapoint):
     
 
 if __name__ == '__main__':
-    train_set = save_process_data(train_files[0], 'train', set())
+    train_set = save_process_data(train_files, 'train', set())
     val_set = save_process_data(val_files, 'val', train_set)
     save_process_data(test_files, 'test', train_set.union(val_set))
